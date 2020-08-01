@@ -16,7 +16,6 @@ REST API using ASP.NET Core with functionality to get, create, edit and delete o
 | Country       | PropertySize  | BirthDate     |
 | PostCode      | LivingArea    | Phone         |
 |               |               | Mail          |
-|               |               | Phone         |
 
 Apartment is related to house, in which apartment is located. </br>
 Resident is related to apartment, in which lives resident.
