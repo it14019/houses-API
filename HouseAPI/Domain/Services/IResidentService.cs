@@ -1,8 +1,6 @@
 ﻿using HouseAPI.Domain.Models;
 using HouseAPI.Domain.Services.Communication;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HouseAPI.Domain.Services

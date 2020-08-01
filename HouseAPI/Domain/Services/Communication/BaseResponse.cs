@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace HouseAPI.Domain.Services.Communication
+﻿namespace HouseAPI.Domain.Services.Communication
 {
     public abstract class BaseResponse
     {

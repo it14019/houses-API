@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using HouseAPI.Domain.Models;
+﻿using HouseAPI.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HouseAPI.Persistance.Contexts
