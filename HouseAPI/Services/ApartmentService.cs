@@ -62,7 +62,7 @@ namespace HouseAPI.Services
 
             catch (Exception ex)
             {
-                return new ApartmentResponse($"An error occured when updatingthe apartment: {ex.Message}");
+                return new ApartmentResponse($"An error occured when updating the apartment: {ex.Message}");
             }
         }
 

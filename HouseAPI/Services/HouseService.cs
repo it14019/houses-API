@@ -66,7 +66,6 @@ namespace HouseAPI.Services
 
             }
         }
-
         public async Task<HouseResponse> DeleteAsync(int id)
         {
             var existingHouse = await _houseRepository.FindByIdAsync(id);

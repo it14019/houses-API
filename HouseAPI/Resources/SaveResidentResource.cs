@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HouseAPI.Domain.Models
+namespace HouseAPI.Resources
 {
-    public class Resident
+    public class SaveResidentResource
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -16,6 +16,5 @@ namespace HouseAPI.Domain.Models
         public string Mail { get; set; }
 
         public int ApartmentId { get; set; }
-        public Apartment Apartment { get; set; }
     }
 }

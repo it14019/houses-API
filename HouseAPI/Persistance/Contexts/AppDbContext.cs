@@ -31,8 +31,22 @@ namespace HouseAPI.Persistance.Contexts
 
             builder.Entity<House>().HasData
            (
-               new House { Id = 1, Number = 22, Street = "Zirgu Street", City = "Jelgava", Country = "Latvia", PostCode = "LV-3001" },
-               new House { Id = 2, Number = 19, Street = "Spridisu Street", City = "Dobele", Country = "Latvia", PostCode = "LV-3008" }
+               new House { 
+                   Id = 1,
+                   Number = 22, 
+                   Street = "Zirgu Street", 
+                   City = "Jelgava", 
+                   Country = "Latvia", 
+                   PostCode = "LV-3001" 
+               },
+               new House { 
+                   Id = 2, 
+                   Number = 19, 
+                   Street = "Spridisu Street", 
+                   City = "Dobele", 
+                   Country = "Latvia", 
+                   PostCode = "LV-3008" 
+               }
            );
 
             builder.Entity<Apartment>().ToTable("Apartments");
@@ -43,7 +57,7 @@ namespace HouseAPI.Persistance.Contexts
             builder.Entity<Apartment>().Property(p => p.Rooms).IsRequired().HasMaxLength(2);
             builder.Entity<Apartment>().Property(p => p.PropertySize).IsRequired();
             builder.Entity<Apartment>().Property(p => p.LivingArea).IsRequired();
-           /* builder.Entity<Apartment>().HasMany(p => p.Residents).WithOne(p => p.Apartment).HasForeignKey(p => p.ApartmentId);*/
+            builder.Entity<Apartment>().HasMany(p => p.Residents).WithOne(p => p.Apartment).HasForeignKey(p => p.ApartmentId);
 
             builder.Entity<Apartment>().HasData
             (
@@ -69,16 +83,41 @@ namespace HouseAPI.Persistance.Contexts
                 }
             );
 
-      /*      builder.Entity<Resident>().ToTable("Resident");
+            builder.Entity<Resident>().ToTable("Residents");
             builder.Entity<Resident>().HasKey(p => p.Id);
             builder.Entity<Resident>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Resident>().Property(p => p.Name).IsRequired();
             builder.Entity<Resident>().Property(p => p.Surname).IsRequired();
-            builder.Entity<Resident>().Property(p => p.PersonalCode).IsRequired().HasMaxLength(13);
-            builder.Entity<Resident>().Property(p => p.BirthDate).IsRequired().HasMaxLength(9);
+            builder.Entity<Resident>().Property(p => p.PersonalCode).IsRequired().HasMaxLength(12);
+            builder.Entity<Resident>().Property(p => p.BirthDate).IsRequired().HasMaxLength(8);
             builder.Entity<Resident>().Property(p => p.Phone).IsRequired().HasMaxLength(8);
-            builder.Entity<Resident>().Property(p => p.Mail).IsRequired();*/
+            builder.Entity<Resident>().Property(p => p.Mail).IsRequired();
 
+            builder.Entity<Resident>().HasData
+          (
+              new Resident
+              {
+                  Id = 1,
+                  Name = "Krista",
+                  Surname = "Awesome",
+                  PersonalCode = "121295-10000",
+                  BirthDate = "12-12-95",
+                  Phone = 28222222,
+                  Mail = "krista@awesome.com",
+                  ApartmentId = 1
+              },
+              new Resident
+              {
+                  Id = 2,
+                  Name = "Edgars",
+                  Surname = "Awesome",
+                  PersonalCode = "111194-20000",
+                  BirthDate = "11-11-94",
+                  Phone = 28211111,
+                  Mail = "edgars@awesome.com",
+                  ApartmentId = 2
+              }
+          );
         }
     }
 }

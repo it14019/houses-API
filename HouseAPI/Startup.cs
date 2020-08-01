@@ -40,13 +40,16 @@ namespace HouseAPI
 
             services.AddScoped<IHouseRepository, HouseRepository>();
             services.AddScoped<IApartmentRepository, ApartmentRepository>();
+            services.AddScoped<IResidentRepository, ResidentRespository>();
 
             services.AddScoped<IHouseService, HouseService>();
             services.AddScoped<IApartmentService, ApartmentService>();
+            services.AddScoped<IResidentService, ResidentService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddAutoMapper(typeof(House));
+            services.AddAutoMapper(typeof(Apartment));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

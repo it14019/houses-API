@@ -14,6 +14,7 @@ namespace HouseAPI.Mapping
         {
             CreateMap<SaveHouseResource, House>();
             CreateMap<SaveApartmentResource, Apartment>();
+            CreateMap<SaveResidentResource, Resident>();
         }
     }
 }

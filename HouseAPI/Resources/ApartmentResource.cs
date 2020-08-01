@@ -11,7 +11,6 @@ namespace HouseAPI.Resources
         public int Number { get; set; }
         public int Floor { get; set; }
         public int Rooms { get; set; }
-        /*  public int ResidentAmount { get; set; }*/
         public double PropertySize { get; set; }
         public double LivingArea { get; set; }
         public int HouseId { get; set; } 
