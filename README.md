@@ -1,4 +1,4 @@
-REST API usign ASP.NET Core with functionality to get, create, edit and delete objects.
+REST API using ASP.NET Core with functionality to get, create, edit and delete objects.
 
 **Instructions**
 1. clone repository `https://github.com/it14019/houses-API.git`
